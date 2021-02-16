@@ -4,34 +4,34 @@ using System.Text;
 
 namespace DnD
 {
-    class Weapon
+    class Armor
     {
-        //1-9 Wooden
+        //1-9 Leather
         //10-19 Iron
         //20-29 Steel
         //30-39 Obsidian
         //40 Legendary
 
         private string name;
-        private int attack;
+        private int armorValue;
         private int durability;
         private bool isBroken;
 
         public string Name { get => name; set => name = value; }
-        public int Attack { get => attack; set => attack = value; }
+        public int ArmorValue { get => armorValue; set => armorValue = value; }
         public int Durability { get => durability; set => durability = value; }
         public bool IsBroken { get => isBroken; set => isBroken = value; }
 
 
-        public void GenerateRandomWeapon()
+        public void GenerateRandomArmor()
         {
-            Attack = Die.Roll1d20() + Die.Roll1d20();
+            ArmorValue = Die.Roll1d20() + Die.Roll1d20();
 
-            if (Attack > 1 && Attack <= 9) { Name = "Wooden Sword"; }
-            if (Attack > 10 && Attack <= 19) { Name = "Iron Sword"; }
-            if (Attack > 20 && Attack <= 29) { Name = "Steel Sword"; }
-            if (Attack > 30 && Attack <= 39) { Name = "Obsidian Sword"; }
-            if (Attack == 40) { Name = "Legendary Sword"; }
+            if (ArmorValue > 1 && ArmorValue <= 9) { Name = "Leather Armor"; }
+            if (ArmorValue > 10 && ArmorValue <= 19) { Name = "Iron Armor"; }
+            if (ArmorValue > 20 && ArmorValue <= 29) { Name = "Steel Armor"; }
+            if (ArmorValue > 30 && ArmorValue <= 39) { Name = "Obsidian Armor"; }
+            if (ArmorValue == 40 ){ Name = "Legendary Armor"; }
 
             Durability = 100;
             IsBroken = false;
