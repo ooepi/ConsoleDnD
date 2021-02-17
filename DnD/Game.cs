@@ -23,6 +23,7 @@ namespace DnD
 
         public void Fight(Character player)
         {
+            MusicBox.BattleSong();
             Character enemy = new Character();
             enemy.Init("Enemy");
             enemy.UpdateStatuses();
@@ -44,6 +45,7 @@ namespace DnD
 
                 if (!enemy.IsAlive)
                 {
+                    MusicBox.VictorySong();
                     enemy.Death();
                     break;
                 }
@@ -60,6 +62,7 @@ namespace DnD
 
                 if (!player.IsAlive)
                 {
+                    MusicBox.DefeatSong();
                     player.Death();
                     break;
                 }

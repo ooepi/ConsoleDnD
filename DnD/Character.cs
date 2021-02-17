@@ -161,7 +161,8 @@ namespace DnD
 
         public void GetHit(int damage)
         {
-            //int modifiedDamage = damage - armor.ArmorValue / 3;
+
+            MusicBox.SwingSound();
             Health -= damage;
             if (Health <= 0)
             {

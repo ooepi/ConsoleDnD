@@ -20,6 +20,7 @@ namespace DnD
                 }
                 else if (value == 2)
                 {
+                    
                     game.Fight(character);
                 }
             }

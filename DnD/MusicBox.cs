@@ -4,8 +4,10 @@ using System.Text;
 
 namespace DnD
 {
-    static class MusicBox
+    public static class MusicBox
     {
+
+        //notes
         private static int C1 = 265;
         private static int D = 297;
         private static int Eb = 315;
@@ -18,52 +20,59 @@ namespace DnD
         private static int C2 = 530;
 
 
-        static void VictorySong()
+        //lenghts
+        private static int longa = 4000;
+        private static int ddble = 3000;
+        private static int dble = 2000;
+        private static int full = 1000;
+        private static int half = 500;
+        private static int quarter = 250;
+        private static int eighth = 125;
+        private static int sixteenth = 62;
+        private static int thirty2nd = 31;
+
+        private static void Note(int pitch, int length)
         {
+            Console.Beep(pitch, length);
+        }
+
+
+        public static void VictorySong()
+        {
+            Note(G, sixteenth);
+            Note(G, sixteenth);
+            Note(G, thirty2nd);
+            Note(H, half);
+            Note(G, sixteenth);
+            Note(H, full);
 
         }
 
-        static void DefeatSong()
+        public static void DefeatSong()
         {
+            Note(F, quarter);
+            Note(E, quarter);
+            Note(Eb, quarter);
+            Note(D, quarter);
+            Note(C1, full);
 
         }
 
-        static void BattleSong()
+        public static void BattleSong()
         {
-
+            Note(C1, eighth);
+            Note(D, eighth);
+            Note(Eb, eighth);
+            Note(E, eighth);
+            Note(F, eighth);
+            Note(E, eighth);
+            Note(F, eighth);
+            Note(E, eighth);
         }
 
-        static void SwingSound()
+        public static void SwingSound()
         {
-
-        }
-
-        static void PlayDramaticSound()
-        {
-            Console.Beep(Gb, 300);
-            Console.Beep(Gb, 300);
-            Console.Beep(Gb, 300);
-            Console.Beep(Eb, 1200);
-
-            Console.Beep(F, 300);
-            Console.Beep(F, 300);
-            Console.Beep(F, 300);
-            Console.Beep(D, 1200);
-        }
-
-        static void PlayUpNDown()
-        {
-            for (int i = 0; i < 4; i++)
-            {
-                for (int y = 2000; y < 4000; y += 100)
-                {
-                    Console.Beep(y, 100);
-                }
-                for (int y = 4000; y > 2000; y -= 100)
-                {
-                    Console.Beep(y, 100);
-                }
-            }
+            Note(C2, eighth);
         }
     }
 }
